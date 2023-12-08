@@ -25,7 +25,7 @@ const socket = io(),
 		},
 		yAxis: {
 			title: {
-				text: 'ЗАПРОСЫ В СЕКУНДУ',
+				text: 'REQUESTS PER SECOND',
 				margin: 10
 			}
 		},
@@ -34,7 +34,7 @@ const socket = io(),
 		},
 		series: [{
 			type: 'area',
-			name: 'Количество запросов',
+			name: 'Number of Requests',
 			color: '#5b4ba3',
 			data: []
 		}]
@@ -42,10 +42,10 @@ const socket = io(),
 	chart = new Highcharts.Chart(options)
 Highcharts.setOptions({
 	lang: {
-		loading: 'Загрузка...',
-		months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-		weekdays: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-		shortMonths: ['Янв.', 'Фев.', 'Март', 'Апр.', 'Май', 'Июнь', 'Июль', 'Авг.', 'Сент.', 'Окт.', 'Нояб.', 'Дек.']
+		loading: 'Loading...',
+		months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+		weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+		shortMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 	}
 })
 
@@ -55,7 +55,7 @@ function getStringCount(count) {
 	let i = 0 === count ? count : Math.floor(Math.log(count) / Math.log(1000)),
 		result = parseFloat((count / Math.pow(1000, i)).toFixed(2))
 	if(i >= 17) return '∞'
-	result += ['', ' тыс.', ' млн.', ' млрд.', ' трлн.', ' кврлн.', ' квинтл.', ' скстлн.', ' сптлн.', ' октлн.', ' нонлн.', ' дцлн.', ' ундцлн.', ' додцлн.', ' трдцлн.', ' квтуордцлн.', ' квндцлн.'][i]
+	result += ['', ' thousand', ' million', ' billion', ' trillion', ' quadrillion', ' quintillion', ' sextillion', ' septillion', ' octillion', ' nonillion', ' decillion', ' undecillion', ' duodecillion', ' tredecillion', ' quattuordecillion', ' quindecillion.'][i]
 	result = result.replace(/e/g, '')
 	result = result.replace(/\+/g, '')
 	result = result.replace(/Infinity/g, '∞')
