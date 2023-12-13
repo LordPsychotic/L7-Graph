@@ -8,31 +8,25 @@
       <link rel='stylesheet' type='text/css' href='css/style.css'>
       <link rel='stylesheet' type='text/css' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css'>
       <meta property="og:title" content="Hittable.pw" />
-      <meta property="og:image" content="assets/favicon.png" />
+      <meta property="og:image" content="favicon.png" />
       <meta property="og:url" content="https://hittable.pw" />
       <meta property="og:description" content="Totally Hittable" />
       <meta property="og:type" content="website" />
+      <link rel="shortcut icon" href="favicon.png" type="image/png">
    </head>
    <body>
-<div class='hamburger-menu'>
-  <input id='menu-toggle' type='checkbox'/>
-  <label class='menu-btn' for='menu-toggle'>
-    <span></span>
-  </label>
-  <ul class='menu-box'>
-    <a class='menu-item fas fa-home' href=''> home</a>
-  </ul>
+<div>
       <center>
          <div style='background: #06122f; width: 90%; margin: 20px 20px 20px 20px; border-radius: 15px' id='menu-l7'>
             <h2 style="color: white">Live Layer 7 DSTAT</h2>
-            <h3><span id='attack-address'></span></h3>
+            <h3>Target URL: <span id='attack-address'></span></h3>
             <p><button type='button' style='cursor:pointer;' class='green-btn' onclick='copyAddress()'>Copy URL</button></p>
             <div id='graph' style='border-radius: 15px'></div>
             </div>
          <div style='background: #06122f; width: 90%; weight: 90%; margin: 20px 20px 20px 20px; border-radius: 15px; padding: 1px;' id='stats'>
             <h2 style="color: white">Statistics</h2> 
-            <p>The largest number of requests per second: <span id='max_requests'></span></p>
-            <p>Number of requests per day: <span id='total_day_requests'></span></p>
+            <p>Highest recorded requests per second: <span id='max_requests'></span></p>
+            <p>Total requests today: <span id='total_day_requests'></span></p>
        </div>
       </center>
    </body>
